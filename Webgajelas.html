@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Gabut Hafiz</title>
+<style>
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+header {
+    padding: 50px 20px;
+    animation: fadeTextDown 1.5s ease;
+}
+h1, h2, p, footer, .badge, .quote, .kata {
+    animation: fadeTextUp 1.5s ease;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+button {
+    background: blue;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.1em;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 25, 255, 0.6);
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.1);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+    padding: 20px;
+    margin: 25px 15px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.6);
+    border: 2px solid black;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi scroll */
+.card.fade-up {
+    animation: fadeInUp 0.8s forwards;
+}
+.card.fade-down {
+    animation: fadeInDown 0.8s forwards;
+}
+
+.hidden-text {
+    display: none;
+    margin-top: 15px;
+    font-size: 1em;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+}
+.quote {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    font-style: italic;
+}
+.kata {
+    margin-top: 1px;
+    padding: 1px;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+}
+.badge {
+    margin-top: 1px;
+    padding: 1px;
+    font-size: 0.9em;
+    color: white;
+    font-weight: bold;
+}
+
+/* Keyframes animasi */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeTextUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeTextDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Selamat Datang!</h1>
+    <p>Selamat datang di web gajelas🗿, btw baru belajar</p>
+</header>
+
+<div class="badge">Pengembang : @Hafiz</div>
+
+<div class="container">
+    <div class="card">
+        <h2>🌐 Tentang web</h2>
+        <p>Apa fungsi web ini?</p>
+        <button onclick="toggleText(this)">Tentang web</button>
+        <div class="hidden-text">Ya nga tau🗿, cuman web gabut,<br><br>Btw maaf kalo jelek, namanya juga baru belajar🙂</div>
+    </div>
+    <div class="card">
+        <h2>👤 Tentang Admin/Pengembang</h2>
+        <p>Tentang admin!</p>
+        <button onclick="toggleText(this)">Tentang admin</button>
+        <div class="hidden-text">Rahasia bang🗿</div>
+    </div>
+    <div class="card">
+        <h2>Tiktok Admin</h2>
+        <p>📱 Akun Tiktok Admin</p>
+        <button onclick="toggleText(this)">Akun Tiktok</button>
+        <div class="hidden-text">
+            <button onclick="window.open('https://tiktok.com/@hafizz_105', '_blank')">🔗Tiktok</button>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Chanel YouTube Admin</h2>
+        <p>📱 CH Yutup Admin</p>
+        <button onclick="toggleText(this)">Chanel YouTube</button>
+        <div class="hidden-text">
+            <button onclick="window.open('https://youtube.com/@hafizmc105', '_blank')">🔗YouTube</button>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Download MC Ori🥵</h2>
+        <p>📥 Ori cuy</p>
+        <button onclick="toggleText(this)">Link download</button>
+        <div class="hidden-text">
+            <button onclick="window.open('https://play.google.com/store/apps/details?id=com.mojang.minecraftpe', '_blank')">🔗 Download Minecraft</button>
+        </div>
+    </div>
+    <div class="card">
+        <h2>GT MC Admin</h2>
+        <p>🎮GamerTag MC Admin</p>
+        <button onclick="toggleText(this)">GamerTag</button>
+        <div class="hidden-text">GT : Hafiz105<br><br>Jangan lupa add ya😊</div>
+    </div>
+    <div class="card">
+      <h2>No WA Admin</h2>
+      <p>📱WA Admin</p>
+      <button onclick="toggleText(this)">No WA</button>
+      <div class="hidden-text">WA : 62851××××××××<br><br>🗣️ : Kok di sensor min?<br><br>💂 : Yaiya lah, soalnya takut di bug ama bocil bug, udah pake SC geratisan ampas pula😹
+      </div>
+    </div>
+    <div class="card">
+        <h2>No rekening Admin</h2>
+        <p>💳 Rekening Bank Admin</p>
+        <button onclick="toggleText(this)">Rekening💸</button>
+        <div class="hidden-text">
+            <button onclick="window.open('https://files.catbox.moe/99w29w.jpg', '_blank')">💳Rekening Admin</button>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Jangan Buka!</h2>
+        <p>Intinya jangan☠️</p>
+        <button onclick="toggleText(this)">Jangan!</button>
+        <div class="hidden-text">
+            Sebaiknya jangan💀<br>
+            <button onclick="window.open('https://files.catbox.moe/psqz37.jpg', '_blank')">☠️</button>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Rahasia Admin</h2>
+        <p>Rahasia Admin🤫</p>
+        <button onclick="toggleText(this)">Rahasia</button>
+        <div class="hidden-text">8.2.6.-067.-/.-x..-/8..-x.-/x.-3..-<br><br> Ga faham? pecahin sendiri</div>
+    </div>
+</div>
+
+<footer class="kata">Kata-kata hari ini :</footer>
+<footer class="quote">
+    Jangan malu jika buat web hasil nyontek, tetapi malulah ketika buat web pake AI tapi ngaku-ngaku kita yang buat🗿
+</footer>
+
+<script>
+function toggleText(button) {
+    let text = button.nextElementSibling;
+    if (text.style.display === "none" || text.style.display === "") {
+        text.style.display = "block";
+        button.innerText = "Sembunyikan😶‍🌫️";
+    } else {
+        text.style.display = "none";
+        button.innerText = "Tampilkan🔥";
+    }
+}
+
+let lastScroll = 0;
+
+function checkCards() {
+    let currentScroll = window.pageYOffset;
+    let scrollDown = currentScroll > lastScroll;
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        let rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50 && !card.classList.contains('animated')) {
+            card.classList.add('animated');
+            if (scrollDown) {
+                card.classList.add('fade-up');
+            } else {
+                card.classList.add('fade-down');
+            }
+        }
+    });
+
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+}
+
+window.addEventListener('load', checkCards);
+window.addEventListener('scroll', checkCards);
+</script>
+
+</body>
+</html>
